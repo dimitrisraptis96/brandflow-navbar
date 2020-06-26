@@ -203,9 +203,45 @@ function SocialMediaPicker() {
           styles={{
             container: styles => ({
               ...styles,
-              width: "100%",
+              width: "100%"
+            }),
+            control: styles => ({
+              ...styles,
+              border: "2px solid black !important",
+              borderRadius: "4px"
+            }),
+            indicatorSeparator: styles => ({
+              ...styles,
+              width: "0"
+            }),
+            input: styles => ({
+              ...styles,
+              color: "black"
+            }),
+            dropdownIndicator: styles => ({
+              ...styles,
+              color: "black"
+            }),
+            menu: styles => ({
+              ...styles,
               border: "2px solid black",
               borderRadius: "4px"
+            }),
+            menuList: styles => ({
+              ...styles,
+              padding: "0 !important"
+            }),
+            option: (styles, state) => ({
+              ...styles,
+              margin: "0.5rem",
+              width: "calc(100% -1rem)",
+              borderRadius: "4px",
+              color: state.isSelected ? "white" : "black",
+              background: state.isSelected
+                ? "black"
+                : state.isFocused
+                ? "#f5f5f5"
+                : "transparent"
             })
           }}
         />
